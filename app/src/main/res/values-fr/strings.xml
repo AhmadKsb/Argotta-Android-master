@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chat_3</string>
+    <string name="Username">Nom d\'utilisateur</string>
+    <string name="Password">Mot de passe</string>
+    <string name="Login">S\'identifier</string>
+    <string name="CantLogIn">Vous ne pouvez pas vous connecter?</string>
+    <string name="CreateAccount">Créer un compte</string>
+    <string name="Hello">Bonjour</string>
+    <string name="SwipeLeftToSelect">Balayez vers la gauche pour sélectionner la langue</string>
+    <string name="MyNameIsArgotta">Je m\'appelle Argotta, quelle est la tienne?</string>
+    <string name="Name">Prénom</string>
+    <string name="FamilyName">Nom de Famille</string>
+    <string name="Next">Prochain</string>
+    <string name="Country">Pays</string>
+    <string name="MobileNumber">Numéro de portable</string>
+    <string name="WhereDoYouLive">Où habites-tu?</string>
+    <string name="FinalStep">Dernière étape</string>
+    <string name="Email">Email</string>
+    <string name="ByCheckingThisBox">en cochant cette case, vous acceptez notre</string>
+    <string name="PrivacyPolicy"> Politique de confidentialité</string>
+    <string name="Register">Registre</string>
+    <string name="ForgotMyPassword">Oublié mon mot de passe</string>
+
+
+
+</resources>

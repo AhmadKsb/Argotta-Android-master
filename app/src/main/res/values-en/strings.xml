@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chat_3</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Login">Login</string>
+    <string name="CantLogIn">Cant log in?</string>
+    <string name="CreateAccount">Create account</string>
+    <string name="Hello">Hello</string>
+    <string name="SwipeLeftToSelect">Swipe left to select language</string>
+    <string name="MyNameIsArgotta">My name is Argotta, whats yours?</string>
+    <string name="Name">Name</string>
+    <string name="FamilyName">Family Name</string>
+    <string name="Next">Next</string>
+    <string name="Country">Country</string>
+    <string name="MobileNumber">Mobile Number</string>
+    <string name="WhereDoYouLive">Where do you live?</string>
+    <string name="FinalStep">Final Step</string>
+    <string name="Email">Email</string>
+    <string name="ByCheckingThisBox">by checking this box, you agree to our</string>
+    <string name="PrivacyPolicy"> Privacy policy</string>
+    <string name="Register">Register</string>
+    <string name="ForgotMyPassword">Forgot my password</string>
+
+    <string name="Users_textView">Users</string>
+    <string name="Chats_textView">Chats</string>
+    <string name="Send_Button">Send</string>
+    <string name="enter_message">Enter message</string>
+
+</resources>

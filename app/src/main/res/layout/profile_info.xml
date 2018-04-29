@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.ahmad.chat_3.activities.ProfileInfoActivity"
+    android:orientation="vertical"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_height="130dp"
+        android:layout_width="130dp"
+        app:civ_border_overlay="true"
+        android:background="@drawable/profile_picture_size"
+        android:layout_gravity="center_horizontal"
+        app:civ_border_width="2dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/image"
+        />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Add Image"
+        android:textColor="#35A8E0"
+        />
+
+
+    <TextView
+        android:id="@+id/fullName"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edittext_bg"
+        android:textColor="#808080"
+        android:layout_marginTop="60dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:inputType="textPersonName"
+        />
+
+    <TextView
+        android:id="@+id/email_ET"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/edittext_bg"
+        android:inputType="textEmailAddress"
+        android:textColor="#808080"
+        android:padding="10dp"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/country_ET"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/edittext_bg"
+        android:inputType="text"
+        android:textColor="#808080"
+        android:padding="10dp"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/phone_ET"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/edittext_bg"
+        android:inputType="text"
+        android:textColor="#808080"
+        android:padding="10dp"
+        android:singleLine="true"/>
+
+    <Button
+        android:id="@+id/chat"
+        android:layout_width="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/start_bt"
+        android:baselineAligned="false"
+        android:text="Let's start"
+        android:textColor="#fff" />
+
+</LinearLayout>

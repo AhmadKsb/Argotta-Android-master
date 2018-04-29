@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ahmad.chat_3.activities.MainActivity">
+
+
+    <item android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/ic_magnify"
+        app:showAsAction="ifRoom"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+
+
+
+    <item android:id="@+id/add"
+        android:title="Add"
+        android:menuCategory="container"
+        app:showAsAction="collapseActionView" />
+
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:menuCategory="container"
+        app:showAsAction="collapseActionView" />
+
+</menu>

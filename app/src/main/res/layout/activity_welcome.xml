@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/welcome_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Welcome"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:paddingTop="50dp"
+        android:textSize="60sp" />
+
+    <ImageView
+        android:id="@+id/logoArgotta"
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/welcome_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:background="@drawable/start_bt"
+        android:text="Let's get started!"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

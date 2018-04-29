@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/gradient_background"
+    >
+
+
+<ImageView
+    android:id="@+id/white_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0"
+    app:srcCompat="@drawable/white_bg" />
+
+
+
+<ImageView
+    android:id="@+id/circle"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:contentDescription="@string/app_name"
+    android:layout_alignParentBottom="true"
+    app:srcCompat="@drawable/white_circle" />
+
+
+<ImageView
+    android:id="@+id/logo"
+    android:layout_width="160dp"
+    android:layout_height="150dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:alpha="0"
+    android:contentDescription="@string/app_name"
+    app:srcCompat="@drawable/logo" />
+
+<ImageView
+    android:id="@+id/argottaname"
+    android:layout_width="160dp"
+    android:layout_height="150dp"
+    android:layout_alignEnd="@+id/logo"
+    android:layout_alignRight="@+id/logo"
+    android:layout_alignTop="@+id/logo"
+    android:layout_marginEnd="11dp"
+    android:layout_marginRight="11dp"
+    android:layout_marginTop="16dp"
+    android:alpha="0"
+    android:padding="2dp"
+    app:srcCompat="@drawable/argottaword" />
+
+</RelativeLayout>
