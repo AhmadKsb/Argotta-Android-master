@@ -43,6 +43,7 @@
         <activity android:name=".activities.FinalStepActivity" />
         <activity android:name=".activities.LanguagesActivity" />
         <activity android:name=".activities.WelcomeActivity" />
+        <activity android:name=".activities.SettingsLanguages" />
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/title_activity_main"

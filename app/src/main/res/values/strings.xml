@@ -24,107 +24,107 @@
 
     <string-array name="all_languages">
         <item>Afrikaans</item>
-        <item>Albanian</item>
-        <item>Amharic</item>
+        <item>Shqip, Shqiptar</item>
+        <item>ኣማርኛ</item>
         <item>Arabic</item>
-        <item>Armenian</item>
-        <item>Azerbaijani</item>
-        <item>Basque</item>
-        <item>Belarusian</item>
-        <item>Bengali</item>
-        <item>Bosnian</item>
-        <item>Bulgarian</item>
-        <item>Burmese</item>
-        <item>Catalan</item>
-        <item>Cebuano</item>
-        <item>Chichewa</item>
-        <item>Chinese</item>
-        <item>Corsican</item>
-        <item>Croatian</item>
-        <item>Czech</item>
-        <item>Danish</item>
-        <item>Dutch </item>
+        <item>Հայերեն</item>
+        <item>Azərbaycanca</item>
+        <item>Euskara</item>
+        <item>Беларуская</item>
+        <item>বাংলা</item>
+        <item>Босански, Bosanski</item>
+        <item>български език</item>
+        <item>မြန်မာစကား</item>
+        <item>Català</item>
+        <item>Bisaya, Sinugboanon</item>
+        <item>Nyanja</item>
+        <item>文言</item>
+        <item>Corsu</item>
+        <item>Hrvatski</item>
+        <item>Čeština</item>
+        <item>Dansk</item>
+        <item>Nederlands</item>
         <item>English</item>
-        <item>Esperanto </item>
-        <item>Estonian </item>
-        <item>Filipino </item>
-        <item>Finnish </item>
+        <item>Esperanto</item>
+        <item>Eesti</item>
+        <item>Wikang Filipino</item>
+        <item>Suomi</item>
         <item>French</item>
-        <item>Frisian</item>
-        <item>Galician</item>
-        <item>Georgian</item>
-        <item>German</item>
-        <item>Greek</item>
-        <item>Gujarati </item>
-        <item>Haitian Creole </item>
-        <item>Hausa </item>
-        <item>Hawaiian </item>
-        <item>Hebrew </item>
-        <item>Hindi </item>
-        <item>Hmong </item>
-        <item>Hungarian </item>
-        <item>Icelandic </item>
-        <item>Igbo </item>
-        <item>Indonesian </item>
-        <item>Irish </item>
-        <item>Italian </item>
-        <item>Japanese </item>
-        <item>Javanese </item>
-        <item>Kannada </item>
-        <item>Kazakh </item>
-        <item>Khmer </item>
-        <item>Korean </item>
-        <item>Kurdish </item>
-        <item>Kyrgyz </item>
-        <item> Lao </item>
-        <item> Latin </item>
-        <item> Latvian </item>
-        <item> Lithuanian </item>
-        <item> Luxembourgish </item>
-        <item> Macedonian </item>
+        <item>Noordfreesk</item>
+        <item>Galego</item>
+        <item>ქართული</item>
+        <item>Deutsch</item>
+        <item>ελληνικά</item>
+        <item>ગુજરાતી</item>
+        <item>Haitian Creole</item>
+        <item> حَوْس</item>
+        <item>ʻŌlelo Hawaiʻi</item>
+        <item> עברי‬</item>
+        <item>हिन्दी</item>
+        <item>lug Moob</item>
+        <item>Magyar</item>
+        <item>Íslenska</item>
+        <item>Asụsụ Igbo</item>
+        <item>Bahasa</item>
+        <item>Gaeilge</item>
+        <item>Italiano</item>
+        <item>日本語</item>
+        <item>ꦧꦱꦗꦮ</item>
+        <item>ಕನ್ನಡ</item>
+        <item>Қазақ Tілі </item>
+        <item>ភាសាខ្មែរ </item>
+        <item>조선말, 한국어 </item>
+        <item> Kurdí </item>
+        <item> Kyrgyz </item>
+        <item> ພາສາລາວ </item>
+        <item> Latina </item>
+        <item> Latviešu </item>
+        <item> Lietuvių </item>
+        <item> Lëtzebuergesch </item>
+        <item> Mакедонски </item>
         <item> Malagasy </item>
-        <item> Malay </item>
-        <item> Malayalam </item>
-        <item> Maltese </item>
-        <item> Maori </item>
-        <item> Marathi </item>
-        <item> Mongolian </item>
-        <item> Nepali </item>
-        <item> Norwegian (Bokmål) </item>
-        <item> Pashto </item>
-        <item> Persian </item>
-        <item> Polish </item>
-        <item> Portuguese </item>
-        <item> Punjabi </item>
-        <item> Romanian </item>
-        <item> Russian </item>
-        <item> Samoan </item>
+        <item> Bahasa Melayu </item>
+        <item> മലയാളം </item>
+        <item> Malti </item>
+        <item> te Reo Māori </item>
+        <item> मराठी </item>
+        <item> Монгол Хэл </item>
+        <item> नेपाली </item>
+        <item> Norsk (Bokmål) </item>
+        <item> پښتو </item>
+        <item> فارسی </item>
+        <item> Polski </item>
+        <item> Português </item>
+        <item> पंजाबी </item>
+        <item> Română </item>
+        <item> русский </item>
+        <item> Gagana Sāmoa </item>
         <item> Scots Gaelic </item>
         <item> Serbian </item>
         <item> Sesotho </item>
         <item> Shona </item>
-        <item> Sindhi </item>
-        <item> Sinhala </item>
-        <item> Slovak </item>
+        <item> سنڌي </item>
+        <item> සිංහල </item>
+        <item> Slovenčina </item>
         <item> Slovenian </item>
-        <item> Somali </item>
-        <item> Spanish </item>
+        <item> الصومالية </item>
+        <item> Español </item>
         <item> Sundanese </item>
-        <item> Swahili </item>
-        <item> Swedish </item>
+        <item> Kiswahili </item>
+        <item> Svenska </item>
         <item> Tajik </item>
-        <item> Tamil </item>
+        <item> தமிழ் </item>
         <item> Telugu </item>
-        <item> Thai </item>
-        <item> Turkish </item>
-        <item> Ukrainian </item>
-        <item> Urdu </item>
-        <item> Uzbek </item>
-        <item> Vietnamese </item>
-        <item> Welsh </item>
+        <item> คนไทย </item>
+        <item> Türkçe </item>
+        <item> Українська мова </item>
+        <item> اُردُو </item>
+        <item> اوزبیک </item>
+        <item> Tiếng Việt Nam </item>
+        <item> Cymraeg </item>
         <item> Xhosa </item>
-        <item> Yiddish </item>
-        <item> Yoruba </item>
+        <item> ייִדיש ייִדיש‬ </item>
+        <item> Èdè Yorùbá </item>
         <item> Zulu </item>
     </string-array>
 

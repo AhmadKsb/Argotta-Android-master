@@ -20,8 +20,8 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         if (loggedIn()) {
-//            Intent intent = new Intent(this, MainActivity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         }
 
 

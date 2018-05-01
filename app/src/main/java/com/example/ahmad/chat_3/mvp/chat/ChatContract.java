@@ -1,5 +1,7 @@
 package com.example.ahmad.chat_3.mvp.chat;
 
+import android.widget.ImageView;
+
 import com.example.ahmad.chat_3.models.db.Message;
 import com.example.ahmad.chat_3.mvp.BasePresenter;
 

@@ -5,55 +5,122 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.ChatActivity"
-    android:orientation="vertical"
     >
 
-    <LinearLayout
+    <include
+    layout="@layout/chat_toolbar" />
+
+    <ScrollView
+        android:id="@+id/scroll_view_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_below="@+id/chattoolbar"
+        android:layout_above="@id/button_chatbox_send"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
         >
-
-    <include
-        layout="@layout/chat_toolbar" />
-        <include
-            layout="@layout/scrollview" />
-
-    </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/reyclerview_message_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </ScrollView>
     <View
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginBottom="0dp"
-        android:background="#dfdfdf"
-        android:layout_gravity="bottom"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
-
-        <EditText
-            android:id="@+id/edittext_chatbox"
-            android:paddingTop="10dp"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@android:color/transparent"
-            android:hint="@string/enter_message"
-            android:maxLines="6" />
+    android:layout_width="0dp"
+    android:layout_height="2dp"
+    android:layout_marginBottom="0dp"
+    android:background="#dfdfdf"
+    android:layout_gravity="bottom"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent" />
         <Button
             android:id="@+id/button_chatbox_send"
             android:layout_width="64dp"
             android:layout_height="48dp"
-            android:layout_gravity="bottom"
-            android:layout_toRightOf="@+id/edittext_chatbox"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:gravity="center"
             android:text="@string/Send_Button"
             android:textSize="14dp" />
+
+    <EditText
+    android:id="@+id/edittext_chatbox"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingLeft="10dp"
+    android:layout_toLeftOf="@id/button_chatbox_send"
+    android:layout_alignParentBottom="true"
+    android:inputType="text"
+    android:background="@android:color/transparent"
+    android:hint="@string/enter_message"
+
+    />
     </RelativeLayout>
-</RelativeLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--tools:context=".activities.ChatActivity"-->
+<!--android:orientation="vertical"-->
+    <!--&gt;-->
+
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--&gt;-->
+
+    <!--<include-->
+        <!--layout="@layout/chat_toolbar" />-->
+    <!--<include-->
+        <!--layout="@layout/scrollview" />-->
+
+<!--</LinearLayout>-->
+<!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:layout_marginBottom="0dp"-->
+    <!--android:background="#dfdfdf"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent" />-->
+<!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true">-->
+
+    <!--<EditText-->
+
+        <!--android:id="@+id/edittext_chatbox"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:layout_width="260dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:inputType="text"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:hint="@string/enter_message"-->
+
+        <!--/>-->
+    <!--<Button-->
+        <!--android:id="@+id/button_chatbox_send"-->
+        <!--android:layout_width="64dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:layout_toRightOf="@+id/edittext_chatbox"-->
+        <!--android:background="?attr/selectableItemBackground"-->
+        <!--android:clickable="true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/Send_Button"-->
+        <!--android:textSize="14dp" />-->
+<!--</RelativeLayout>-->
+<!--</RelativeLayout>-->

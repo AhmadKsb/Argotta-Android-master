@@ -5,9 +5,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.ColorRes;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
@@ -22,9 +27,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -116,20 +124,42 @@ public class MainActivity extends BaseActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setBackgroundColor(Color.parseColor("#3f51b5"));
-
-
+        tabLayout.setBackgroundColor(Color.parseColor("#ffffff"));
 
 
         String users_text = getResources().getString(R.string.Users_textView);
         String chats_text = getResources().getString(R.string.Chats_textView);
-
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_account_circle_white_36dp);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_account_circle_white_48dp);
+        tabLayout.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#35A8E0"), PorterDuff.Mode.SRC_IN);
         tabLayout.getTabAt(0).setText(users_text);
+        tabLayout.setTabTextColors(Color.parseColor("#000000"),Color.parseColor("#000000"));
+
+
+//        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(60, 300);
+//        tabLayout.getChildAt(0).setLayoutParams(params);
+
+        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#35A8E0"));
+        tabLayout.setSelectedTabIndicatorHeight((int) (3 * getResources().getDisplayMetrics().density));
+
 
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_supervisor_account_white_36dp);
+        tabLayout.getTabAt(1).getIcon().setColorFilter(Color.parseColor("#35A8E0"), PorterDuff.Mode.SRC_IN);
         tabLayout.getTabAt(1).setText(chats_text);
 
+        int marginOffset = 60;
+        View tabStrip = tabLayout.getChildAt(0);
+        if (tabStrip instanceof ViewGroup) {
+            ViewGroup tabStripGroup = (ViewGroup) tabStrip;
+            for (int i = 0; i < ((ViewGroup) tabStrip).getChildCount(); i++) {
+                View tabView = tabStripGroup.getChildAt(i);
+                if (tabView.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+                    ((ViewGroup.MarginLayoutParams) tabView.getLayoutParams()).leftMargin = marginOffset;
+                    ((ViewGroup.MarginLayoutParams) tabView.getLayoutParams()).rightMargin = marginOffset;
+                }
+            }
+
+            tabLayout.requestLayout();
+        }
 
     }
 
@@ -216,18 +246,22 @@ public class MainActivity extends BaseActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.front_tool)));
 
         SearchManager searchManager = (SearchManager)
                 getSystemService(Context.SEARCH_SERVICE);
         MenuItem searchMenuItem = menu.findItem(R.id.search);
+
         searchView = (SearchView) searchMenuItem.getActionView();
+
 
         searchView.setSearchableInfo(searchManager.
                 getSearchableInfo(getComponentName()));
 
         searchView.setIconifiedByDefault(false);  //to make whole toolbar CLICKABLE for search
-
         searchView.setSubmitButtonEnabled(false);
+//        Color.parseColor("#35A8E0"), PorterDuff.Mode.SRC_IN
+
         searchView.setOnQueryTextListener((SearchView.OnQueryTextListener) fragments[viewPager.getCurrentItem()]);
         searchView.setOnSearchClickListener((v) -> menu.findItem(R.id.add).setVisible(false));
         searchView.setOnCloseListener(() -> {
@@ -241,7 +275,7 @@ public class MainActivity extends BaseActivity {
                 //menu.findItem(R.id.add).setVisible(true);
                 return true;
             default:
-                menu.findItem(R.id.add).setVisible(true);
+                //menu.findItem(R.id.add).setVisible(true);
                 return true;
         }
     }
@@ -250,12 +284,32 @@ public class MainActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        switch (id) {
-            default:
-                return false;
-        }
-    }
 
+        if (id == R.id.action_profile) {
+            Intent intent = new Intent(MainActivity.this, ProfileInfoActivity.class);
+            startActivity(intent);
+        }
+        if (id == R.id.action_settings) {
+//            Intent intent = new Intent(MainActivity.this, LanguagesActivity.class);
+//            startActivity(intent);
+        }
+        if (id == R.id.action_translate) {
+            Intent intent = new Intent(MainActivity.this, SettingsLanguages.class);
+            startActivity(intent);
+    }
+//        if (id == R.id.action_button) {
+//            Intent intent = new Intent(MainActivity.this, EngineActivity.class);
+//            startActivity(intent);
+//        }
+
+        return super.onOptionsItemSelected(item);
+
+//        switch (id) {
+//            default:
+//                return false;
+//        }
+
+    }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 

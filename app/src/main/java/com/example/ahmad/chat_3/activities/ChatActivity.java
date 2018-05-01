@@ -4,14 +4,21 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,11 +48,17 @@ public class ChatActivity extends BaseActivity implements ChatContract.View {
     private RecyclerView recyclerView;
     private String senderId;
 
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        getMenuInflater().inflate(R.menu.chat_message_context_menu,menu);
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.chattoolbar);
         setSupportActionBar(toolbar);
@@ -57,7 +70,16 @@ public class ChatActivity extends BaseActivity implements ChatContract.View {
                 finish();
             }
         });
-
+//        Button btnCamera = (Button)findViewById(R.id.btnCamera);
+//        imageView = (ImageView)findViewById(R.id.imageVieww);
+//
+//        btnCamera.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                startActivityForResult(intent,0);
+//            }
+//        });
         MessageReceiver messageReceiver = new MessageReceiver();
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver,
                 new IntentFilter("messageReceived"));
@@ -66,7 +88,9 @@ public class ChatActivity extends BaseActivity implements ChatContract.View {
         new AQ(this).ready(() -> {
             {
                 recyclerView = findViewById(R.id.reyclerview_message_list);
+
                 recyclerView.setLayoutManager(new LinearLayoutManager(this));
+                registerForContextMenu(recyclerView);
             }
 
             // message send
@@ -86,6 +110,7 @@ public class ChatActivity extends BaseActivity implements ChatContract.View {
                             recyclerView.smoothScrollToPosition(itemCount - 1);
                     }
                 }
+
             });
 
 
@@ -106,6 +131,7 @@ public class ChatActivity extends BaseActivity implements ChatContract.View {
             presenter.attachView(this);
             presenter.getMessages();
         });
+
     }
 
 
@@ -143,6 +169,8 @@ public class ChatActivity extends BaseActivity implements ChatContract.View {
         int itemCount = recyclerView.getAdapter().getItemCount();
         if (itemCount > 0)
             recyclerView.smoothScrollToPosition(itemCount - 1);
+
+
     }
 
     @Override
@@ -171,4 +199,5 @@ public class ChatActivity extends BaseActivity implements ChatContract.View {
         Intent intent = new Intent(ChatActivity.this, MainActivity.class);
         startActivity(intent);
     }
+
 }

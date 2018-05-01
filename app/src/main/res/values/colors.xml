@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3f51b5</color>
-    <color name="colorPrimaryDark">#303f9f</color>
-    <color name="colorAccent">#ff4081</color>
+    <color name="colorPrimary">#1D5D8B</color>
+    <color name="colorPrimaryDark">#00345d</color>
+    <color name="colorAccent">#74A9D4</color>
     <color name="search_text">#000</color>
-    <color name="received_item">#358AB1</color>
-    <color name="sent_item">#1D5D8B</color>
+    <color name="received_item">#8DD7FA</color>
+    <color name="sent_item">#74ACD8</color>
+    <color name="front_tool">#1D5D8B</color>
+    <color name="fragments_color">#74A9D4</color>
+
     <!--<color name="gradienttt"><gradient-->
         <!--android:angle="135"-->
         <!--android:startColor="#2DAB66"-->
